@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">דף הבית</a>
+        <a href="{{ url_for('menu') }}">תפריט</a>
+        <a href="{{ url_for('nihul') }}">ניהול</a>
+        <a href="{{ url_for('login') }}">כניסה</a>
+        <a href="{{ url_for('register') }}">הרשמה</a>
+        <a href="{{ url_for('review') }}"> חוות דעת</a>
+
+
+        <button onclick="toggleCart()" style="margin-right: auto;">הסל שלי</button>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    
+    <!-- Sidebar for the cart -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <h2>הסל שלי</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>סה"כ: <span id="cart-total">₪0.00</span></h3>
+            </select>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
 
