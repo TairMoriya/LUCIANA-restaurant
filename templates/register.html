@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}הרשמה{% endblock %}
+{% block content %}
+<h1>הרשמה</h1>
+<form method="POST" action="{{ url_for('register') }}">
+    <label for="Username">שם משתמש</label>
+    <input type="text" id="Username" name="Username" required>
+    <label for="password">סיסמה</label>
+    <input type="password" id="Passwords" name="Passwords" required>
+    <label for="Email">כתובת דואר אלקטרוני</label>
+    <input type="email" id="Email" name="Email" required>
+    <label for="role"> תפקיד</label>
+    <select name="role">
+        <option value="Operator">עובד</option>
+        <option value="customer">לקוח</option>
+        <option value="manager">מנהל</option>
+    </select><br>
+    <button type="submit" class="button">הרשמה</button>
+</form>
+{% endblock %}
