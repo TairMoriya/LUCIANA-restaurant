@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}השאר חוות דעת{% endblock %}
+{% block content %}
+<h1>השאר חוות דעת</h1>
+<div class="review-container">
+    <form id="review-form" enctype="multipart/form-data" method="POST">
+        <label for="name">שם</label>
+        <input type="text" id="name" name="Username" required>
+        <label for="rating">דירוג</label>
+        <select id="rating" name="Rating" required>
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+        </select>
+        <label for="comment">תגובה</label>
+        <textarea id="comment" name="Comment" rows="4" required></textarea>
+        <label for="ImageURL">העלאת תמונה</label>
+        <input type="text" id="text" name="ImageURL">
+        <button type="submit">שליחה</button>
+    </form>
+</div>
+{% endblock %}
