@@ -76,5 +76,29 @@ Controller: מטפל בקלט של המשתמש.
 מסך נחיתה 
 ![image](https://github.com/user-attachments/assets/7f6e7098-3346-4d4e-86ee-8d58434d276f)
 
+מסך הרשמה 
+![image](https://github.com/user-attachments/assets/4b309a3e-ed2d-4fc2-8f6f-a8ef92cbba5d)
+
+מסך התחברות 
+![image](https://github.com/user-attachments/assets/4a0c9231-6744-4467-a2fd-4c88a8eea6ca)
+
+מסך ניהול 
+![image](https://github.com/user-attachments/assets/492d77c7-5f59-45ad-a033-f20fb56f46c3)
+
+מסך הוספת מנה
+![image](https://github.com/user-attachments/assets/e5b760c9-0f78-4f66-9aff-a0412fbf2622)
 
 
+מסך מחיקת מנה 
+![image](https://github.com/user-attachments/assets/02c6e3be-5977-4c66-b2cb-572a22a57f9b)
+
+מסך שינוי סטטוס הזמנה
+![image](https://github.com/user-attachments/assets/c61e6202-4cb4-4b34-914c-20befdba386e)
+
+מסך חוות דעת
+![image](https://github.com/user-attachments/assets/7554e440-f3da-4fb9-9836-bd72c61e5360)
+
+מסך תפריט
+![image](https://github.com/user-attachments/assets/c7adf4d5-340d-4867-9c44-22f8a8cb7828)
+מסך הסל שלי
+![image](https://github.com/user-attachments/assets/8c1ae72b-8392-48c8-9d2c-2dcbab792c2a)
