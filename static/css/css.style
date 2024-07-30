@@ -1,0 +1,240 @@
+/* CSS */
+
+/* General styles */
+body {
+    font-family: 'calibri', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('https://mekimi.org.il/wp-content/uploads/2022/03/table-g8d065f80f_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 150px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+    text-align: center;
+    position: relative;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #706c6c;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+.navbar a, .navbar button {
+    color: rgb(16, 16, 16);
+    justify-content: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.navbar a:hover, .navbar button:hover {
+    background-color: #eddca6;
+    justify-content: center;
+}
+
+/* Button styles */
+.button {
+    padding: 12px 24px;
+    background-color: #a6cced;
+    color: rgb(27, 25, 25);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #eddca6;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 15px 0 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #a6cced;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.1em;
+}
+
+/* Menu styles */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 15px;
+    border: 2px solid #f4f4f4;
+    border-radius: 12px;
+    background-color: rgba(203, 199, 199, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 30px);
+    text-align: center;
+    line-height: 1.6;
+}
+.menu-item:hover {
+    background-color: #9d9d9d;
+    transform: scale(1.02);
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.menu-item .details {
+    text-align: center;
+}
+
+.menu-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.3em;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu-item p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 1em;
+}
+
+.menu-item button {
+    padding: 10px 20px;
+    background-color: #a6cced;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.menu-item button:hover {
+    background-color: #eddca6;
+}
+
+/* Cart sidebar styles */
+.cart-sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color:  rgba(255, 255, 255, 0.65) ;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: right 0.3s ease;
+    z-index: 1001;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-sidebar h2 {
+    margin-top: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #c7c5c5;
+}
+
+.cart-item .details {
+    flex-grow: 1;
+}
+
+.cart-item .remove-item {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-item .remove-item:hover {
+    background-color: #d32f2f;
+}
+
+.cart-total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-total h3 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
