@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}תפריט{% endblock %}
+{% block content %}
+
+<h1>Menu</h1>
+<div class="menu">
+    {% for item in menu_items %}
+        <div class="menu-item">
+            <img src="{{item.image_name}}" alt="{{ item.ItemName }}">
+            <div class="details">
+                <h3>{{ item.ItemName }}</h3>
+                <p>{{ item.Description }}</p>
+                <p>₪{{ item.Price }}</p>
+            </div>
+            <button onclick="addToCart('{{ item.ItemName }}', '{{ item.Price }}')">הוסף לסל</button>
+        </div>
+    {% endfor %}
+</div>
+  <div id="cart-sidebar" class="cart-sidebar">
+        <h2>הסל שלי</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>סה"כ לתשלום: <span id="cart-total">₪0.00</span></h3>
+
+            <button id="checkout" onclick="checkoutWithOrderIDAndSale()">לתשלום</button>
+        </div>
+
+    </div>
+
+    {% endblock %}
+
+    
