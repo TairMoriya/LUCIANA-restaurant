@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block title %}הנהלה {% endblock %}
+{% block content %}
+<h1>הנהלה </h1>
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+
+    <h2>הזמנות</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>OrderID</th>
+                <th>UserID</th>
+                <th>OrderDate</th>
+                <th>Status</th>
+                <th>TotalPrice</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row.OrderID }}</td>
+                <td>{{ row.UserID }}</td>
+                <td>{{ row.OrderDate }}</td>
+                <td>{{ row.Status }}</td>
+                <td>{{ row.TotalPrice }}</td>
+            </tr>
+            {% else %}
+                <tr>
+                    <td colspan="2">No data</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <h2>חוות דעת</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ReviewID</th>
+                    <th>Username</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                    <th>ReviewDate</th>
+                    <th>ImageURL</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for row in data_Reviews %}
+                <tr>
+                    <td>{{ row.ReviewID }}</td>
+                    <td>{{ row.Username }}</td>
+                    <td>{{ row.Rating }}</td>
+                    <td>{{ row.Comment }}</td>
+                    <td>{{ row.ReviewDate }}</td>
+                    <td><img src="{{ row.ImageURL }}" width="100" height="100"></td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="2">No data</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+</head>
+<button id="add-menu-item-button">הוסף מנה</button>
+
+<!-- טופס להוספת מנה חדשה (מוסתר בהתחלה) -->
+<div id="add-menu-item-form" style="display: none; margin-top: 20px;">
+    <h3>הוסף מנה חדשה</h3>
+    <form id="menu-item-form" enctype="multipart/form-data" method="POST">
+        <input type="hidden" name="form_id" value="add_menu_item">
+        <label for="itemName">שם המנה</label>
+        <input type="text" id="itemName" name="ItemName" required><br><br>
+        <label for="itemDescription">תיאור</label>
+        <input type="text" id="itemDescription" name="Description" required><br><br>
+        <label for="itemPrice">מחיר</label>
+        <input type="number" id="itemPrice" name="Price" required><br><br>
+        <label for="image_name">קישור תמונה</label>
+        <input type="text" id="image_name" name="image_name" required><br><br>
+        <button type="submit">שמור מנה</button>
+    </form>
+</div>
+<!-- כפתור שינוי סטטוס -->
+<button id="perform-action-button">שינוי סטטוס</button>
+
+<!-- חלונית לשינוי סטטוס (מוסתר בהתחלה) -->
+<div id="perform-action-form" style="display: none; margin-top: 20px;">
+    <h3>שינוי סטטוס</h3>
+    <form id="action-form" enctype="multipart/form-data" method="POST">
+        <input type="hidden" name="form_id" value="action-form">
+        <label for="orderId">מספר הזמנה</label>
+        <input type="number" id="orderId" name="OrderID" required><br><br>
+        <label for="orderStatus">סטטוס</label>
+        <select id="orderStatus" name="Status" required>
+            <option value="Completed">סגירה</option>
+            <option value="Preparing">השאר פתוח</option>
+        </select><br><br>
+        <button type="submit">שנה סטטוס הזמנה</button>
+    </form>
+</div>
+
+<!-- כפתור למחיקת מנה -->
+<button id="delete-menu-item-button">מחק מנה</button>
+
+<!-- טופס למחיקת מנה (מוסתר בהתחלה) -->
+<div id="delete-menu-item-form" style="display: none; margin-top: 20px;">
+    <h3>מחק מנה</h3>
+    <form id="delete-item-form" enctype="multipart/form-data" method="POST">
+        <input type="hidden" name="form_id" value="delete_menu_item">
+        <label for="itemName">שם המנה</label>
+        <input type="text" id="itemName" name="ItemName" required><br><br>
+        <button type="submit">מחק מנה</button>
+    </form>
+</div>
+
+{% endblock %}
