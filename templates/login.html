@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}כניסה{% endblock %}
+{% block content %}
+<h1>כניסה</h1>
+<form method="POST" action="{{ url_for('login') }}">
+    <label for="Username">שם משתמש</label>
+    <input type="text" id="Username" name="Username" required>
+    <label for="password">סיסמה</label>
+    <input type="password" id="Passwords" name="Passwords" required>
+    <button type="submit" class="button">כניסה</button>
+    
+</form>
+{% endblock %}
