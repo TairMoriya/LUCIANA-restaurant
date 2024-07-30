@@ -72,3 +72,9 @@ View: מציג את הנתונים וממשק המשתמש.
 Controller: מטפל בקלט של המשתמש.
 
 
+# מסכי הפלטפורמה
+מסך נחיתה 
+![image](https://github.com/user-attachments/assets/7f6e7098-3346-4d4e-86ee-8d58434d276f)
+
+
+
